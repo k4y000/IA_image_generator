@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
-import { Home, CreatePost } from './pages';
+import { Home, CreatePost, PrivacyPolicy } from './pages';
 
 import { logo } from './assets';
 
@@ -24,8 +24,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/create-post" element={<CreatePost/>}/>
+          <Route path="/politique-de-confidentialite" element={<PrivacyPolicy/>}/>
         </Routes>
       </main>
+      <footer className="bg-gray-100 text-gray-600 text-center text-xs py-3">
+        <Link to="/politique-de-confidentialite" className="hover:text-gray-800">
+          Politique de Confidentialité
+        </Link>
+      </footer>
     </BrowserRouter>
   )
 }
