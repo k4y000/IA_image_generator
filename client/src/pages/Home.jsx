@@ -30,7 +30,7 @@ const Home = () => {
       setLoading(true);
 
       try {
-        const response = await fetch('http://localhost:8080/api/V1/post', {
+        const response = await fetch('https://ia-image-generator-server.vercel.app/api/V1/post', {
           method: "GET",
           headers: {
             'Content-Type': 'application/json',

@@ -8,7 +8,9 @@ dotenv.config();
 
 const router = express.Router();
 
-const openai = new OpenAi();
+const openai = new OpenAi(
+    {api_key:process.env.OPENAI_API_KEY}
+);
 
 router.route('/').get((req, res) => {
     res.send('Hello from Dall-E')
