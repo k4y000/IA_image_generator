@@ -13,7 +13,8 @@ const App = () => {
         bg-white sm:px-8 px-4 py-4 
         border-b border-b-[#e6ebf4]">
           <Link to="/">
-            <img src={logo} alt="logo" className="w-28 object-contain"/>
+            <strong className='font-medium text-xl'>{"{Aymio}"}</strong> <span>Le Lab </span><br/> 
+          <span className='text-lime-600'>Comming soon, the coworking designed by Rebecca</span>
           </Link>
           <Link to="/create-post" className='font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md'>
             Create
