@@ -31,7 +31,12 @@ const CreatePost = () => {
                                         body: JSON.stringify({ prompt: form.prompt })
                                     })
         const data = await response.json();
-        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}`});
+        if(data.status == 200) {
+          setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}`});
+        } else {
+          console.log(data);
+          setError(`Error: ${data.error.message}`)
+        }
       } catch(e) {
         console.log(e);
         setError("We have a situation here !")
